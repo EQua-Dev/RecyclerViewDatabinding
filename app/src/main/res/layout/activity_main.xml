@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- TODO 3 change the constaraint layout to layout -->
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+<!--TODO 4 create a linear layout and match parent on height and width -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+<!--TODO 5 add a RecyclerView widget and match parent on height and width, set scrollbars to vertical-->
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recyclerView"
+            android:scrollbars="vertical"
+            />
+        <!--TODO 6 paste the  images to be displayed into the drawable folder-->
+        <!--TODO 7 go to string.xml and create a string-array list of the names and emails of your choice-->
+    </LinearLayout>
+</layout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--TODO 12 add a data attribute with a child attribute of variable -->
+    <!--TODO 13 name the variable user and the type to be the project address to the User Java class-->
+    <data>
+
+        <variable
+            name="user"
+            type="com.example.recyclerviewdatabinding.User" />
+    </data>
+
+<!--TODO 14 create a linear layout containing an imageview and a relative layout containing two textviews-->
+<!--TODO 15 set the relative layout width to match parent and the height to 75dp, layout margin t o 4dp, gravity to center vertical and orientation vertical-->
+    <LinearLayout
+        android:id="@+id/rootView"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_margin="4dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!--TODO 16 change the imageview tag to circularimaeview, set width and height to 50dp marginstart to 15do, civborodercolor to #FF000000 and civborderwidth 1dp-->
+        <!--TODO 20 using dataBinding expression language refer the 1st textview text to the name variable in User.java class and 2nd to email variable-->
+        <!--dataBinding expression language= "@{[javaclassname].[variable name]}"-->
+        <!--TODO 21 enable dataBinding in MainActivity-->
+
+        <!--TODO 57 copy the created custom xml attribute and pass in the parameter with the dataBinding expression language referring it to the imageId-->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_pic"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="1dp"
+            android:imageUrl = "@{user.imageId}"/>
+
+        <!--TODO 17 set relative layout width and height= match parent and margin= 15dp-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp">
+
+            <!--TODO 18 set textview width and height= wrapcontent, alignparenttop and centerinparent =true, textsize= 16sp and style= bold-->
+            <TextView
+                android:id="@+id/profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:text="@{user.name}"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!--TODO 19 set 2nd textview width= wrapcontent and height= matchparent, alignParentBottom and centerInParent= true, margin 2dp,0,3dp,0 and textsize=12sp-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@id/profile_name"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="3dp"
+                android:text="@{user.email}"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

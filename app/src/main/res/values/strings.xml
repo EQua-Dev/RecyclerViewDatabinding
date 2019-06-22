@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">RecyclerViewDatabinding</string>
+    <string-array name="names">
+    <item>Richard</item>
+    <item>Luomy</item>
+    <item>Jane</item>
+    <item>Oluoma</item>
+    <item>Abiodun</item>
+    <item>EQua</item>
+    <item>Chinenye</item>
+    <item>Boborish</item>
+</string-array>
+
+<string-array name="emails">
+<item>richard@gmail.com</item>
+<item>luomy007@yahoo.com</item>
+<item>jane01@hotmail.com</item>
+<item>Moshe@gmail.com</item>
+<item>KOKs@yahoo.com</item>
+<item>eQua.awesome@hotmail.com</item>
+<item>ify@yahoo.com</item>
+<item>uche001@gmail.com</item>
+</string-array>
+</resources>
